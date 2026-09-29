@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>אופק ושות' | רואי חשבון וייעוץ פיננסי</title>
+<meta name="description" content="אופק ושות' – הנהלת חשבונות, שכר, מיסוי ו-CFO לעצמאים, חברות וסטארטאפים. שאלו את הסוכן הדיגיטלי שלנו.">
+<meta name="theme-color" content="#f5f8fb">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;700;800&display=swap">
+<style>
+  /* Critical loader styles, inline so the loader paints before style.css arrives */
+  html, body { background: #f5f8fb; margin: 0; }
+  #loader { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: #f5f8fb; transition: opacity .3s ease, visibility .3s; }
+  #loader.is-hidden { opacity: 0; visibility: hidden; }
+  #loader .loader-mark { width: 88px; height: 88px; }
+  #loader .loader-sun { transform-origin: 32px 40px; animation: sunrise 1.6s ease-in-out infinite alternate; }
+  #loader .loader-rays { transform-origin: 32px 40px; animation: rays 1.6s ease-in-out infinite alternate; }
+  @keyframes sunrise { from { transform: translateY(5px); } to { transform: translateY(0); } }
+  @keyframes rays { from { opacity: .25; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { #loader .loader-sun, #loader .loader-rays { animation: none; } }
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 64 64">
+    <g class="loader-rays" stroke="#b9955b" stroke-width="3" stroke-linecap="round">
+      <line x1="32" y1="9" x2="32" y2="15"/>
+      <line x1="15.5" y1="16" x2="19.5" y2="20.5"/>
+      <line x1="48.5" y1="16" x2="44.5" y2="20.5"/>
+      <line x1="8.5" y1="30" x2="14" y2="31.5"/>
+      <line x1="55.5" y1="30" x2="50" y2="31.5"/>
+    </g>
+    <path class="loader-sun" d="M18 40a14 14 0 0 1 28 0z" fill="#b9955b"/>
+    <line x1="6" y1="40" x2="58" y2="40" stroke="#0b2745" stroke-width="4" stroke-linecap="round"/>
+    <line x1="14" y1="48" x2="50" y2="48" stroke="#0b2745" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+    <line x1="23" y1="55" x2="41" y2="55" stroke="#0b2745" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+  </symbol>
+</svg>
+
+<div id="loader" role="status" aria-label="העמוד נטען">
+  <div class="loader-inner">
+    <!-- Inline copy of the mark so the animation classes apply inside the loader -->
+    <svg class="loader-mark" viewBox="0 0 64 64" aria-hidden="true">
+      <g class="loader-rays" stroke="#b9955b" stroke-width="3" stroke-linecap="round">
+        <line x1="32" y1="9" x2="32" y2="15"/>
+        <line x1="15.5" y1="16" x2="19.5" y2="20.5"/>
+        <line x1="48.5" y1="16" x2="44.5" y2="20.5"/>
+        <line x1="8.5" y1="30" x2="14" y2="31.5"/>
+        <line x1="55.5" y1="30" x2="50" y2="31.5"/>
+      </g>
+      <path class="loader-sun" d="M18 40a14 14 0 0 1 28 0z" fill="#b9955b"/>
+      <line x1="6" y1="40" x2="58" y2="40" stroke="#0b2745" stroke-width="4" stroke-linecap="round"/>
+      <line x1="14" y1="48" x2="50" y2="48" stroke="#0b2745" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+      <line x1="23" y1="55" x2="41" y2="55" stroke="#0b2745" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+    </svg>
+    <div class="loader-word">אופק <span>ושות'</span></div>
+  </div>
+</div>
+<script>
+  // Inline so the loader always goes away, even if script.js fails to load.
+  (function () {
+    var loader = document.getElementById('loader');
+    var done = false;
+    function hide() {
+      if (done) return;
+      done = true;
+      loader.classList.add('is-hidden');
+      setTimeout(function () { loader.remove(); }, 400);
+    }
+    if (document.readyState === 'complete') hide();
+    else window.addEventListener('load', hide, { once: true });
+    setTimeout(hide, 4000); // safety net if something stalls
+  })();
+</script>
+
+<a class="skip" href="#agent">דלגו לסוכן הדיגיטלי</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="אופק ושות' – לראש העמוד">
+      <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-word">אופק <span class="gold">ושות'</span></span>
+    </a>
+    <nav class="links" aria-label="ניווט ראשי">
+      <a href="#services">שירותים</a>
+      <a href="#agent">הסוכן הדיגיטלי</a>
+      <a href="#about">מי אנחנו</a>
+      <a href="#horizon">מבט לאופק</a>
+    </nav>
+    <a class="btn btn-small" href="#agent">דברו עם הסוכן</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">רואי חשבון · ייעוץ פיננסי · ליווי עסקי</p>
+        <h1>המספרים שלכם.<br><span class="gold">השקט שלנו.</span></h1>
+        <p class="lead">מעטפת חשבונאית ופיננסית לעצמאים, חברות וסטארטאפים – צוות מקצועי, תהליכים דיגיטליים, וסוכן <bdi>AI</bdi> שעונה לכם גם בשתיים בלילה.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#agent">שאלו את הסוכן</a>
+          <a class="btn btn-ghost" href="#services">לשירותים ולמחירים</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/hero.jpg" width="1024" height="768" alt="צוות רואי החשבון של אופק ושות' עובד סביב שולחן במשרד מואר עם נוף לעיר" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap stats" role="list">
+    <div class="stat" role="listitem"><strong><bdi dir="ltr">350+</bdi></strong><span>לקוחות פעילים</span></div>
+    <div class="stat" role="listitem"><strong>30</strong><span>אנשי מקצוע</span></div>
+    <div class="stat" role="listitem"><strong>2012</strong><span>שנת הקמה</span></div>
+  </div>
+
+  <section id="services" class="section">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">מה אנחנו עושים</p>
+        <h2>מעטפת פיננסית במקום אחד</h2>
+        <p class="muted">משירותים שוטפים ועד ליווי פיננסי לצמיחה. המחירים לפני מע״מ.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><small>01</small><h3>הנהלת חשבונות לעצמאים</h3><p>קליטת מסמכים, דיווחים שוטפים ומעקב חודשי לעוסקים מורשים.</p><p class="price">החל מ־490 ₪ לחודש</p></article>
+        <article class="card"><small>02</small><h3>הנהלת חשבונות לחברות</h3><p>פקודות יומן, התאמות בנקים וספקים, והכנת חומר לביקורת.</p><p class="price">החל מ־1,200 ₪ לחודש</p></article>
+        <article class="card"><small>03</small><h3>חשבות שכר</h3><p>תלושים, נוכחות, קליטת עובדים חדשים וסיום העסקה.</p><p class="price">החל מ־350 ₪ לחודש</p></article>
+        <article class="card"><small>04</small><h3>דוחות שנתיים ומיסוי</h3><p>דוח שנתי, הצהרות הון, ייעוץ ותכנון מס לקראת סוף שנה.</p><p class="price">דוח שנתי לעצמאי: 1,800 ₪</p></article>
+        <article class="card"><small>05</small><h3><bdi>CFO</bdi> וליווי פיננסי</h3><p>תקציב, תזרים, תחזיות ודוחות ניהוליים לעסקים בצמיחה.</p><p class="price">החל מ־4,500 ₪ לחודש</p></article>
+        <article class="card"><small>06</small><h3>סטארטאפים</h3><p>הנהלת חשבונות, שכר ותמיכה פיננסית לקראת גיוס.</p><p class="price">הצעה מותאמת – שאלו את הסוכן</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="agent" class="section agent">
+    <div class="wrap agent-grid">
+      <div class="agent-copy">
+        <p class="eyebrow eyebrow-light"><bdi>OFEK AI</bdi></p>
+        <h2>הסוכן הדיגיטלי של אופק</h2>
+        <p class="muted-light">כתבו במילים שלכם. הסוכן מחפש במאגר הידע של הפירמה, בודק מועדי דיווח עדכניים באתר רשות המסים, יכול לשלוח לכם מידע במייל ולקבוע שיחת היכרות ביומן.</p>
+        <ul class="agent-points">
+          <li>מחירים, שירותים ותהליך הצטרפות</li>
+          <li>מועדי דיווח רשמיים – עם קישור למקור</li>
+          <li>שליחת סיכום למייל וקביעת פגישה</li>
+        </ul>
+      </div>
+
+      <div class="chat" aria-label="שיחה עם הסוכן הדיגיטלי">
+        <div class="chat-head">
+          <div class="chat-title">
+            <svg class="chat-mark" aria-hidden="true"><use href="#mark"/></svg>
+            <b>אופק <bdi>AI</bdi></b>
+          </div>
+          <span class="online" id="chatState">● זמין</span>
+        </div>
+        <div class="messages" id="messages" role="log" aria-live="polite" aria-relevant="additions">
+          <div class="bubble bot" dir="auto">שלום, אני הסוכן הדיגיטלי של אופק ושות'. במה אוכל לעזור?</div>
+        </div>
+        <div class="chips" id="chips" aria-label="שאלות לדוגמה">
+          <button type="button" class="chip">כמה עולה הנהלת חשבונות לעצמאי?</button>
+          <button type="button" class="chip">מתי מגישים דוח שנתי לשנת 2025?</button>
+          <button type="button" class="chip">אני רוצה לקבוע שיחת היכרות</button>
+        </div>
+        <form class="composer" id="composer" autocomplete="off">
+          <label class="sr-only" for="chatInput">הודעה לסוכן</label>
+          <input id="chatInput" name="message" type="text" enterkeyhint="send" maxlength="800" placeholder="לדוגמה: כמה עולה הנהלת חשבונות לחברה?" dir="auto">
+          <button type="submit" id="sendBtn">שלח</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap about-grid">
+      <figure class="about-media">
+        <img src="assets/consult.jpg" width="1024" height="768" loading="lazy" alt="רואה חשבון מציג ללקוח גרפים בטאבלט במהלך פגישת ייעוץ">
+      </figure>
+      <div>
+        <p class="eyebrow">מי אנחנו</p>
+        <h2>שותפים לדרך, לא רק למספרים</h2>
+        <p class="muted">אופק ושות' הוקמה בשנת 2012 בתל אביב ומלווה עצמאים, חברות קטנות ובינוניות, חברות בצמיחה וסטארטאפים. שלוש מחלקות – שירות וקליטת לקוחות, הנהלת חשבונות ושכר, ומיסוי ו־<bdi>CFO</bdi> – עובדות יחד כדי שתקבלו תמונה פיננסית אחת וברורה.</p>
+        <ul class="facts">
+          <li><b>מענה בתוך יום עסקים</b><span>לפנייה שוטפת</span></li>
+          <li><b>חומר עד ה־5 בחודש</b><span>מועד פנימי להעברת מסמכים</span></li>
+          <li><b>שכר עד ה־25 בחודש</b><span>העברת נתוני נוכחות</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="horizon" class="section horizon">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">מבט לאופק</p>
+        <h2>כל שנת מס מתחילה בזריחה</h2>
+        <p class="muted">סרטון קצר שנוצר ב־<bdi>AI</bdi> עבור אופק ושות'. הסרטון שקט ומתנגן רק כשלוחצים עליו.</p>
+      </div>
+      <figure class="video-frame">
+        <video id="horizonVideo" controls muted playsinline preload="metadata" poster="assets/horizon-poster.jpg" width="1280" height="720" aria-label="זריחה מעל קו החוף של תל אביב">
+          <source src="assets/horizon.mp4" type="video/mp4">
+          הדפדפן שלכם לא תומך בהצגת וידאו.
+        </video>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="brand brand-foot">
+      <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-word">אופק <span class="gold">ושות'</span></span>
+    </div>
+    <p>רחוב הארבעה 1, תל אביב · <bdi dir="ltr">03-555-0100</bdi></p>
+    <p class="note">פרויקט לימודי. העסק, הפרטים והתמונות באתר פיקטיביים; התמונות והסרטון נוצרו ב־<bdi>AI</bdi>.</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
