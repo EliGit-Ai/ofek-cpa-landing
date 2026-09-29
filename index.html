@@ -88,6 +88,7 @@
     </a>
     <nav class="links" aria-label="ניווט ראשי">
       <a href="#services">שירותים</a>
+      <a href="#fit">בדיקת התאמה</a>
       <a href="#agent">הסוכן הדיגיטלי</a>
       <a href="#about">מי אנחנו</a>
       <a href="#horizon">מבט לאופק</a>
@@ -106,7 +107,7 @@
         <p class="lead">מעטפת חשבונאית ופיננסית לעצמאים, חברות וסטארטאפים – צוות מקצועי, תהליכים דיגיטליים, וסוכן <bdi>AI</bdi> שעונה לכם גם בשתיים בלילה.</p>
         <div class="hero-actions">
           <a class="btn" href="#chat">שאלו את הסוכן</a>
-          <a class="btn btn-ghost" href="#services">לשירותים ולמחירים</a>
+          <a class="btn btn-ghost" href="#fit">בדיקת התאמה ומחיר</a>
         </div>
       </div>
       <figure class="hero-media">
@@ -135,6 +136,84 @@
         <article class="card"><small>04</small><h3>דוחות שנתיים ומיסוי</h3><p>דוח שנתי, הצהרות הון, ייעוץ ותכנון מס לקראת סוף שנה.</p><p class="price">דוח שנתי לעצמאי: 1,800 ₪</p></article>
         <article class="card"><small>05</small><h3><bdi>CFO</bdi> וליווי פיננסי</h3><p>תקציב, תזרים, תחזיות ודוחות ניהוליים לעסקים בצמיחה.</p><p class="price">החל מ־4,500 ₪ לחודש</p></article>
         <article class="card"><small>06</small><h3>סטארטאפים</h3><p>הנהלת חשבונות, שכר ותמיכה פיננסית לקראת גיוס.</p><p class="price">הצעה מותאמת – שאלו את הסוכן</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="fit" class="section fit">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">בדיקת התאמה והצעת מחיר</p>
+        <h2>איזה מסלול מתאים לעסק שלכם?</h2>
+        <p class="muted">ממלאים דקה, ומקבלים מיד מסלול מומלץ והערכת מחיר לפי המחירון שלנו – כאן בעמוד וגם למייל.</p>
+      </div>
+      <div class="fit-grid">
+        <form class="fit-form" id="fitForm" novalidate>
+          <div class="field">
+            <label for="fitName">שם מלא</label>
+            <input id="fitName" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" data-msg="נא למלא שם מלא.">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="fitEmail">אימייל</label>
+              <input id="fitEmail" name="email" type="email" autocomplete="email" inputmode="email" dir="ltr" required maxlength="120" data-msg="נא למלא כתובת אימייל תקינה.">
+            </div>
+            <div class="field">
+              <label for="fitPhone">טלפון <span class="optional">(לא חובה)</span></label>
+              <input id="fitPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" pattern="[0-9+\-\s()]{7,20}" data-msg="מספר הטלפון לא תקין.">
+            </div>
+          </div>
+          <fieldset class="field">
+            <legend>סוג העסק</legend>
+            <div class="segmented">
+              <label><input type="radio" name="type" value="self" required data-msg="נא לבחור סוג עסק."><span>עצמאי / עוסק מורשה</span></label>
+              <label><input type="radio" name="type" value="company"><span>חברה</span></label>
+              <label><input type="radio" name="type" value="startup"><span>סטארטאפ</span></label>
+            </div>
+          </fieldset>
+          <div class="field-row">
+            <div class="field">
+              <label for="fitDocs">מסמכים בחודש (בערך)</label>
+              <input id="fitDocs" name="docs" type="number" inputmode="numeric" min="0" max="5000" step="1" required data-msg="נא למלא מספר מסמכים (0–5000).">
+            </div>
+            <div class="field">
+              <label for="fitEmployees">מספר עובדים</label>
+              <input id="fitEmployees" name="employees" type="number" inputmode="numeric" min="0" max="500" step="1" value="0" required data-msg="נא למלא מספר עובדים (0–500).">
+            </div>
+          </div>
+          <fieldset class="field">
+            <legend>שירותים נוספים <span class="optional">(לא חובה)</span></legend>
+            <div class="checks">
+              <label><input type="checkbox" name="extras" value="annual"><span>דוח שנתי / ביקורת</span></label>
+              <label><input type="checkbox" name="extras" value="capital"><span>הצהרת הון</span></label>
+              <label><input type="checkbox" name="extras" value="cfo"><span><bdi>CFO</bdi> – ליווי פיננסי</span></label>
+              <label><input type="checkbox" name="extras" value="taxmeeting"><span>פגישת ייעוץ מס</span></label>
+            </div>
+          </fieldset>
+          <div class="hp" aria-hidden="true">
+            <label for="fitWebsite">אתר</label>
+            <input id="fitWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="consent" required data-msg="נא לאשר את יצירת הקשר.">
+            <span>אני מאשר/ת שאופק ושות' ישלחו לי את ההמלצה במייל ויצרו איתי קשר.</span>
+          </label>
+          <p class="form-error" id="fitFormError" role="alert" hidden></p>
+          <button class="btn fit-submit" id="fitSubmit" type="submit">קבלו מסלול והצעת מחיר</button>
+        </form>
+
+        <div class="fit-panel" id="fitPanel" aria-live="polite">
+          <div class="fit-intro" id="fitIntro">
+            <svg class="fit-mark" aria-hidden="true"><use href="#mark"/></svg>
+            <h3>מה תקבלו?</h3>
+            <ul>
+              <li>מסלול מומלץ לפי היקף הפעילות</li>
+              <li>פירוט מחיר לפי רכיבים, לפני מע״מ</li>
+              <li>רשימת המסמכים להצטרפות</li>
+              <li>עותק מסודר למייל</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
