@@ -22,7 +22,7 @@
   @keyframes rays { from { opacity: .25; } to { opacity: 1; } }
   @media (prefers-reduced-motion: reduce) { #loader .loader-sun, #loader .loader-rays { animation: none; } }
 </style>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=202609292146">
 </head>
 <body>
 
@@ -148,7 +148,7 @@
         <p class="muted">ממלאים דקה, ומקבלים מיד מסלול מומלץ והערכת מחיר לפי המחירון שלנו – כאן בעמוד וגם למייל.</p>
       </div>
       <div class="fit-grid">
-        <form class="fit-form" id="fitForm" novalidate>
+        <form class="fit-form" id="fitForm" novalidate action="javascript:void(0)">
           <div class="field">
             <label for="fitName">שם מלא</label>
             <input id="fitName" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" data-msg="נא למלא שם מלא.">
@@ -303,6 +303,6 @@
   </div>
 </footer>
 
-<script src="script.js" defer></script>
+<script src="script.js?v=202609292146" defer></script>
 </body>
 </html>
