@@ -17,6 +17,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* Anchor targets land below the sticky header instead of under it */
+[id] { scroll-margin-top: 80px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   margin: 0;
@@ -231,5 +233,7 @@ bdi { unicode-bidi: isolate; }
   .hero-actions .btn { flex: 1 1 auto; }
   .chat { padding: 12px; border-radius: 18px; }
   /* --vvh is the visible height (shrinks when the keyboard opens), set in script.js */
-  .messages { height: min(50vh, 400px); height: min(50svh, 400px, calc(var(--vvh, 100svh) - 200px)); min-height: 140px; }
+  /* Whole chat (header + messages + chips + composer ≈ messages + 190px) must fit
+     below the sticky header, so the composer is never cut off. */
+  .messages { height: min(45vh, 380px); height: min(45svh, 380px, calc(var(--vvh, 100svh) - 290px)); min-height: 140px; }
 }

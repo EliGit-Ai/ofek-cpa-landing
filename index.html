@@ -78,7 +78,7 @@
   })();
 </script>
 
-<a class="skip" href="#agent">דלגו לסוכן הדיגיטלי</a>
+<a class="skip" href="#chat">דלגו לסוכן הדיגיטלי</a>
 
 <header class="site-header">
   <div class="wrap nav">
@@ -92,7 +92,7 @@
       <a href="#about">מי אנחנו</a>
       <a href="#horizon">מבט לאופק</a>
     </nav>
-    <a class="btn btn-small" href="#agent">דברו עם הסוכן</a>
+    <a class="btn btn-small" href="#chat">דברו עם הסוכן</a>
   </div>
 </header>
 
@@ -105,7 +105,7 @@
         <h1>המספרים שלכם.<br><span class="gold">השקט שלנו.</span></h1>
         <p class="lead">מעטפת חשבונאית ופיננסית לעצמאים, חברות וסטארטאפים – צוות מקצועי, תהליכים דיגיטליים, וסוכן <bdi>AI</bdi> שעונה לכם גם בשתיים בלילה.</p>
         <div class="hero-actions">
-          <a class="btn" href="#agent">שאלו את הסוכן</a>
+          <a class="btn" href="#chat">שאלו את הסוכן</a>
           <a class="btn btn-ghost" href="#services">לשירותים ולמחירים</a>
         </div>
       </div>
@@ -152,7 +152,7 @@
         </ul>
       </div>
 
-      <div class="chat" aria-label="שיחה עם הסוכן הדיגיטלי">
+      <div class="chat" id="chat" aria-label="שיחה עם הסוכן הדיגיטלי">
         <div class="chat-head">
           <div class="chat-title">
             <svg class="chat-mark" aria-hidden="true"><use href="#mark"/></svg>
@@ -170,7 +170,7 @@
         </div>
         <form class="composer" id="composer" autocomplete="off">
           <label class="sr-only" for="chatInput">הודעה לסוכן</label>
-          <input id="chatInput" name="message" type="text" enterkeyhint="send" maxlength="800" placeholder="לדוגמה: כמה עולה הנהלת חשבונות לחברה?" dir="auto">
+          <input id="chatInput" name="message" type="text" enterkeyhint="send" maxlength="800" placeholder="כתבו כאן את השאלה שלכם…" dir="auto">
           <button type="submit" id="sendBtn">שלח</button>
         </form>
       </div>
