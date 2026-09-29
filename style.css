@@ -230,5 +230,6 @@ bdi { unicode-bidi: isolate; }
   .lead { font-size: 17px; }
   .hero-actions .btn { flex: 1 1 auto; }
   .chat { padding: 12px; border-radius: 18px; }
-  .messages { height: min(55vh, 420px); height: min(55svh, 420px); }
+  /* --vvh is the visible height (shrinks when the keyboard opens), set in script.js */
+  .messages { height: min(50vh, 400px); height: min(50svh, 400px, calc(var(--vvh, 100svh) - 200px)); min-height: 140px; }
 }

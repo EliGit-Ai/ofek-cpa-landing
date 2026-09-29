@@ -269,6 +269,15 @@ function keepComposerVisible() {
   form.scrollIntoView({ block: 'end', behavior: 'smooth' });
 }
 input.addEventListener('focus', () => setTimeout(keepComposerVisible, 300));
+
+// Expose the visible height so CSS can shrink the message list while the keyboard is open.
+function syncVisibleHeight() {
+  const h = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  document.documentElement.style.setProperty('--vvh', `${Math.round(h)}px`);
+}
+syncVisibleHeight();
 if (window.visualViewport) {
-  window.visualViewport.addEventListener('resize', keepComposerVisible);
+  window.visualViewport.addEventListener('resize', () => { syncVisibleHeight(); keepComposerVisible(); });
+} else {
+  window.addEventListener('resize', syncVisibleHeight);
 }
