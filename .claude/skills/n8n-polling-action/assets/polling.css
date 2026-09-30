@@ -1,0 +1,41 @@
+/* Waiting card for polling jobs. Map the custom properties to the project's palette. */
+.job {
+  --job-ok: #1f7a52;
+  --job-err: #b42318;
+  --job-err-bg: #fdecea;
+  --job-accent: #b9955b;
+  --job-ink: #10243d;
+  --job-muted: #5b6b7e;
+  --job-line: #dfe7ee;
+  border: 1px solid var(--job-line); border-radius: 14px;
+  padding: 12px 14px; background: #fbfcfd; font-size: 15px;
+}
+.job-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.job-steps li { display: flex; align-items: center; gap: 10px; color: #9aa7b4; }
+.job-steps li .dot {
+  width: 18px; height: 18px; flex: none; border-radius: 50%;
+  border: 2px solid currentColor; display: grid; place-items: center; font-size: 11px; line-height: 1;
+}
+.job-steps li.done { color: var(--job-ok); }
+.job-steps li.done .dot { background: var(--job-ok); border-color: var(--job-ok); color: #fff; }
+.job-steps li.done .dot::after { content: "✓"; }
+.job-steps li.active { color: var(--job-ink); font-weight: 500; }
+.job-steps li.active .dot { border-color: var(--job-accent); border-top-color: transparent; animation: job-spin .9s linear infinite; }
+.job-steps li.failed { color: var(--job-err); font-weight: 500; }
+.job-steps li.failed .dot { background: var(--job-err); border-color: var(--job-err); color: #fff; }
+.job-steps li.failed .dot::after { content: "✕"; }
+.job-steps .meta { color: var(--job-muted); font-weight: 400; margin-inline-start: auto; font-variant-numeric: tabular-nums; }
+.job-id { font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: var(--job-muted); }
+@keyframes job-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .job-steps li.active .dot { animation: none; border-top-color: var(--job-accent); }
+}
+
+.job-error { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--job-err-bg); color: var(--job-err); }
+.job-error b { display: block; }
+.job-error p { color: #7a271a; margin: 2px 0 0; }
+.job-error .btn {
+  margin-top: 10px; min-height: 44px; padding: 8px 20px;
+  border: 0; border-radius: 12px; background: var(--job-err); color: #fff;
+  font: inherit; font-weight: 700; cursor: pointer;
+}
